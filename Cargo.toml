@@ -10,7 +10,7 @@ edition = "2018"
 sha2 = "*"
 pbkdf2 = { version = "*", default-features = false }
 base64 = "*"
-rand = "*"
+rand = "0.5.0"
 hex = "*"
 hmac = "*"
 log = "*"
