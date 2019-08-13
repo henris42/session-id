@@ -1,0 +1,17 @@
+[package]
+name = "session-id"
+version = "0.1.0"
+authors = ["Henri Sundelin <henri.sundelin@iki.fi>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sha2 = "*"
+pbkdf2 = { version = "*", default-features = false }
+base64 = "*"
+rand = "*"
+hex = "*"
+hmac = "*"
+log = "*"
+simple_logger = "*"
