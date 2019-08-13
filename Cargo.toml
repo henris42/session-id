@@ -1,5 +1,5 @@
 [package]
-name = "session-id"
+name = "session_id"
 version = "0.1.0"
 authors = ["Henri Sundelin <henri.sundelin@iki.fi>"]
 edition = "2018"
