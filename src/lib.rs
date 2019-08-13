@@ -5,7 +5,7 @@
 
 use hmac::Hmac;
 //use log::*;
-use rand::Rng;
+use rand::{thread_rng, Rng};
 use sha2::Sha256;
 
 pub struct State {
@@ -22,7 +22,7 @@ pub struct SessionId {
 impl SessionId {
     pub fn new(rounds: usize, salt: Vec<u8>) -> SessionId {
         let mut array = [0_u8; 32];
-        rand::thread_rng().fill(&mut array);
+        thread_rng().fill(&mut array);
         let s = Box::new(State {
                 secret: array.to_vec(),
                 salt: salt,
