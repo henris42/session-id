@@ -61,6 +61,12 @@ impl SessionId {
         self.session.secret.to_vec()
     }
 
+    pub fn get_secret_b64(&self) -> String {
+        let v = self.get_secret();
+        let b64 = base64::encode(&v);
+        b64
+    }
+
     pub fn set_secret(&mut self, secret: Vec<u8>) {
         self.session.secret = secret;
     }
