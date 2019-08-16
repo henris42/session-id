@@ -51,7 +51,7 @@ impl SessionId {
         let v = self.get();
         let b64 = base64::encode(&v);
         let sess = percent_encode(b64.clone().as_bytes(), NON_ALPHANUMERIC).to_string();
-        b64
+        sess
     }
 
     pub fn next(&mut self) {
