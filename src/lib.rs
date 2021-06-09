@@ -41,7 +41,7 @@ impl SessionId {
         pbkdf2::pbkdf2::<Hmac<Sha256>>(
             &self.session.secret,
             &self.session.salt,
-            self.session.rounds + self.session.step,
+	    (self.session.rounds + self.session.step) as u32,
             &mut v,
         );
         v.to_vec()
